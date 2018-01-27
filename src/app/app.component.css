@@ -3,3 +3,6 @@ nav {
     -moz-box-shadow: 2px 2px 5px 0px rgba(166,153,166,1);
     box-shadow: 2px 2px 5px 0px rgba(166,153,166,1);
 }
+.nav-link{
+	margin-left:20px;
+}
