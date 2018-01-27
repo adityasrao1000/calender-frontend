@@ -1,0 +1,15 @@
+.alert{
+	width:150px;
+	height: 32px;
+	background:#90CAF9;
+	position:absolute;
+	cursor:pointer;
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(107,97,107,1);
+-moz-box-shadow: 0px 0px 3px 0px rgba(107,97,107,1);
+box-shadow: 0px 0px 3px 0px rgba(107,97,107,1);
+	
+}
+
+.alert:hover{
+	z-index:1;
+}

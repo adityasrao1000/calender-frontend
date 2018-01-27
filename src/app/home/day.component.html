@@ -1,0 +1,10 @@
+<span style="font-size:.8em; margin-left:6px"> {{day}}</span>
+<br>
+<div style="padding-left:25px">
+	<div *ngIf="num.length===0" style="width:100%">
+	  <i class="fa fa-plus-circle" style="width:50px;display:block; margin:auto; font-size:40px; color:#2196F3"></i>
+	</div>
+	<div class="alert" *ngFor="let n of num; let i = index" [style.margin-left.px]="i*10" [style.margin-top.px]="i*10">
+	  <p style="margin-top:-10px">{{n}}</p>
+	</div>
+</div>

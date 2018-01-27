@@ -1,0 +1,20 @@
+.blocks{
+	float:left;
+	width:19%;
+	height:90px;
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
+-moz-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
+box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
+    padding:2px;
+}
+.blocks b{
+	margin-left:8px;
+	margin-top:8px;
+}
+.form-control{
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(166,153,166,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(166,153,166,1);
+    box-shadow: 2px 2px 5px 0px rgba(166,153,166,1);
+}
+
+
