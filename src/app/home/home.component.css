@@ -3,8 +3,8 @@
 	width:19%;
 	height:90px;
 	-webkit-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
--moz-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
+   -moz-box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
+    box-shadow: 0px 0px 2px 0px rgba(189,189,189,1);
     padding:2px;
 }
 .blocks b{
@@ -20,4 +20,37 @@ i{
 	cursor:pointer;
 }
 
+#date-container{
+	min-width:1250px;
+	margin-top:17px;
+}
 
+.date-block{
+	min-width:250px;
+}
+#date-container .fa{
+	float:right; 
+	color:#B0BEC5; 
+	margin:5px 5px 0 0;
+}
+@media only screen and (max-width: 600px) {
+    #date-container {
+      min-width:0px;
+      width:100%;
+  }
+    .date-block{
+      min-width:0px;
+      width:100%;
+    }
+    .blocks{
+      width:100%;
+    }
+    #date-container .fa{
+	  font-size:2em;
+    }
+    #date-container .fa:nth-child(2n){
+	  margin-top:50px;
+	  font-size:1.8em;
+	  margin-right:-27px;
+    }
+}

@@ -2,9 +2,9 @@
 <br>
 <div style="padding-left:25px">
 	<div *ngIf="num.length===0" style="width:100%">
-	  <i class="fa fa-plus-circle" (click)="show()" style="width:50px;display:block; margin:auto; font-size:40px; color:lightgreen"></i>
+	  <i class="fa fa-plus-circle" (click)="show()" ngbTooltip="Click to add events" style="width:50px;display:block; margin:auto; font-size:40px; color:lightgreen"></i>
 	</div>
 	<div class="alert" *ngFor="let n of num; let i = index" [style.margin-left.px]="i*10" [style.margin-top.px]="i*10">
-	  <p style="margin-top:-10px"><b> {{n}}</b></p>
+	  <p style="margin-top:-8px; font-size:.85em"><b> {{n}}</b></p>
 	</div>
 </div>

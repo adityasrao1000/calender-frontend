@@ -7,9 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 
 export class DayComponent {
-@Input() day;
-@Input() num;
+
+  @Input() day;
+  @Input() num;
   show(): void {
-    alert(this.day);
+    window.alert(this.day);
   }
+
 }

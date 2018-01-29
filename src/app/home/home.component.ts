@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DayComponent } from './day.component';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './home.component.html',
@@ -7,6 +8,11 @@ import { DayComponent } from './day.component';
 })
 
 export class HomeComponent {
+
+  years: number[] = [];
+  current_year: number = new Date().getFullYear();
+  months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
   dates = [{day: 1, events: ['meeting at 10', 'sales enquiry'] },
            {day: 2, events: ['ring bell', 'lazer event', 'more..'] },
            {day: 3, events: ['ring bell', 'lazer event', 'more..'] },
@@ -39,9 +45,17 @@ export class HomeComponent {
            {day: 30, events: ['ring bell', 'lazer event', 'more..'] },
            {day: 31, events: ['ring bell', 'lazer event', 'more..'] }
            ];
+  constructor(private router: Router) {
+    this.years.push(this.current_year - 1);
+    this.years.push(this.current_year );
+    this.years.push(this.current_year + 1);
+  }
+  redirect(date: string) {
+   this.router.navigate([`details/${date}`]);
+  }
 
-  disp(year: string): void {
-      if (year === 'jan') {
+  disp(month: string): void {
+      if (month === '1') {
        this.dates = [{day: 1, events: ['meeting at 10', 'sales enquiry'] },
            {day: 2, events: ['ring bell', 'lazer event', 'more..'] },
            {day: 3, events: ['ring bell', 'lazer event', 'more..'] },
@@ -75,7 +89,7 @@ export class HomeComponent {
            {day: 31, events: ['ring bell', 'lazer event', 'more..'] }
            ];
       }
-      if (year === 'feb') {
+      if (month === '2') {
         this.dates = [{day: 1, events: ['ring bell', 'lazer event', 'more..'] },
            {day: 2, events: ['ring bell', 'calender'] },
            {day: 3, events: ['ring bell', 'lazer event', 'more..'] },

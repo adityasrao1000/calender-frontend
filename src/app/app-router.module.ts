@@ -1,5 +1,6 @@
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { DateDetailsComponent } from './date-details/details.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,8 +12,11 @@ const appRoutes: Routes = [
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
-    path: '**', component: PageNotFoundComponent
+    path: 'details/:id', component: DateDetailsComponent
   },
+  {
+    path: '**', component: PageNotFoundComponent
+  }
 ];
 
 
