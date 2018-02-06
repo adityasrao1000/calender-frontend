@@ -2,8 +2,8 @@
 <div class="container-fluid">
 	<select #month (change)="disp(month.value)" style="max-width:100px; float:left" class="form-control">
 		<option *ngFor="let month of months; let i=index" [value]="i+1" >{{month}}</option>
-
 	</select>
+	
 	<select #year  style="max-width:100px; float:left; margin-left:20px" class="form-control">
 		<option *ngFor="let year of years" [attr.selected]="current_year===year ? true:null" [value]="year">{{year}}</option>
 	</select>
@@ -11,10 +11,10 @@
 	
 	<div id="date-container">
 		<div *ngFor="let date of dates" class="date-block" class="blocks">
-		  <i (click)="redirect(date.day+'-'+month.value+'-'+year.value)" class="fa fa-info-circle" placement="right" ngbTooltip="Click to view details"></i>
+		  <i (click)="redirect(date.day+'-'+month.value+'-'+year.value)" class="fa fa-info-circle"></i>
 		  <i class="fa fa-calendar" aria-hidden="true"></i>
 		  <app-day [day]="date.day" [num]="date.events"></app-day>
 		</div>
 	</div>
 </div>
-<br>
+<div id="spacing"></div>
