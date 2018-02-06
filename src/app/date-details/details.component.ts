@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class DateDetailsComponent {
-  date;
+  date: string = '';
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(res => this.date = res);
   }
